@@ -1,0 +1,70 @@
+﻿<script async src="https://www.googletagmanager.com/gtag/js?id=G-L7856P3VNT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-L7856P3VNT');
+</script>
+<!DOCTYPE html>
+<html style="width:100%;height:100%;background-color:black;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Minecraft 1.12.2</title>
+    
+    <!-- Eaglercraft Loader Config -->
+    <script type="text/javascript">
+    window.disableUserscripts = true;
+    window.__eaglercraftLoaderClient = {
+        container: "game_frame",
+        name: "Eaglercraft 1.12",
+        file: "net.peytonplayz585.eaglercraft.v1_12.client",
+        cid: "bafybeidrnchyech7b26rqhm3tayt7p6mxvl23lzd4f5mcyqda7hbrzyal4",
+        path: "",
+        download: "https://cdn.jsdelivr.net/gh/genizy/mc@main/data/1.12.2.gz",
+        dlSize: 15601341,
+        gzip: true
+    };
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/genizy/mc@main/shared/loader.js"></script>
+    <link type="image/png" rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/genizy/mc@main/shared/game.png" />
+    
+    <style>
+        body { margin:0; width:100%; height:100%; overflow:hidden; background-color:white; }
+        #game_frame { width:100%; height:100%; cursor: crosshair; }
+    </style>
+</head>
+<body>
+
+
+<div id="game_frame"></div>
+
+
+<!-- POINTER LOCK IMPLEMENTATION -->
+<script type="text/javascript">
+    const gameContainer = document.getElementById('game_frame');
+
+
+    // Function to request lock
+    function requestPointerLock() {
+        const element = gameContainer.querySelector('canvas') || gameContainer;
+        element.requestPointerLock = element.requestPointerLock || element.mozRequestPointerLock || element.webkitRequestPointerLock;
+        element.requestPointerLock();
+    }
+
+
+    // Attempt to lock on click (User interaction is required)
+    gameContainer.addEventListener('click', () => {
+        requestPointerLock();
+    });
+
+
+    // Check for lock errors (Common on Google Sites)
+    document.addEventListener('pointerlockerror', function(e) {
+        console.error("Pointer Lock failed. If you are on Google Sites, this is a sandbox restriction.");
+    }, false);
+</script>
+
+
+</body>
+</html>
